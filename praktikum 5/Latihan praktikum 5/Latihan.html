@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiruStation</title>
+    <style>
+        body{
+            background-color: rgb(34, 34, 34);
+        }
+        header{
+            background-color: rgb(20, 129, 186);
+            padding: 3px;
+            border-radius: 10px;
+            display: flex;
+        }
+        .header_left{
+            text-align: left;
+            margin-right: 50px;
+            flex: 3;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            display: flex;
+        }
+        .header_center{
+            text-align: center;
+            margin-top: 5px;
+            flex: 4;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .header_right{
+            text-align: right;
+            margin-right: 50px;
+            margin-left: 50px;
+            flex: 3;
+        }
+        .header_center input{
+            width: 400px;
+            height:35px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .header_right img{
+            width: 35px;
+            height: auto;
+            margin-top: 20px;
+        }
+        .logo{
+            flex: 1;
+        }
+        .logo img{
+            width: 50px;
+            height: auto;
+            border-radius: 10px;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+        .konten{
+            margin: 50px;
+            margin-top: 20px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .video{
+            display: flex;
+            list-style: none;
+            overflow-x: auto;
+        }
+        .video::-webkit-scrollbar{
+            display: none;
+        } 
+        .video-item{
+            margin-right: 20px;
+        }
+        .video iframe {
+            width: 400px;
+            height: 225px;
+            border-radius: 10px;
+        }footer{
+            background-color: rgb(20, 129, 186);
+            padding-bottom: 20px;
+        }
+        .mirustation{
+            display: flex;
+            list-style: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .mirustation img{
+            width: 35px;
+            height: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .contact{
+            list-style: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+       <div class="header_left">
+        <h1>   MiruStation</h1>
+       </div>
+       <div class="header_center">
+        <input type="text" class="header_center-telusuri" placeholder=" Telusuri">
+       </div>
+       <div class="header_right">
+        <img src="https://www.iib.org/resource/resmgr/images/Untitled_design.png" alt="">
+       </div>
+    </header>
+    <div class="konten">
+        <h2>Ardhianzy</h2>
+        <ul class="video">
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/YJnrnx49C5o?si=nqHckPzTdpaVVLD9" frameborder="0" allowfullscreen></iframe>
+                <p>Cara Berpikir Seperti Katagiri Yuuichi Dari Anime Tomodachi Game</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/bX9SGOxoeq0?si=iG_7SZF7jIwoxfgZ" frameborder="0" allowfullscreen></iframe>
+                <p>Filosofi Dan Psikologi Johan Liebert Dari Monster</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/XfgkSwSPaTM?si=djAQGsrm-ueQ2W3p" frameborder="0" allowfullscreen></iframe>
+                <p>Filosofi Monkey D. Luffy Dari Anime One Piece</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/Q_fJKdnVzX0?si=B2LDZfqm-2tzS98P" frameborder="0" allowfullscreen></iframe>
+                <p>Cara Berpikir Osamu Dazai Dari Anime Bungo Stray Dogs</p>
+            </li>
+        </ul>
+        <hr>
+        <h2>Topi Sihir Animation</h2>
+        <ul class="video">
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/qDtF_LXQ8tg?si=yYFaT-DJG-3qmlYf" frameborder="0" allowfullscreen></iframe>
+                <p>Rasa Kerja Jadi Youtuber</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/HYCikTJo9fY?si=FuTb-SZvuy-m0-gW" frameborder="0" allowfullscreen></iframe>
+                <p>Game Masa Kecil</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/CjnOtGSKI7Q?si=U1_J6G593iyC9OdS" frameborder="0" allowfullscreen></iframe>
+                <p>Bolos dan Hampir di Culik</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/YQpJaYJGbpo?si=8e4k7jsAKTa2KXAI" frameborder="0" allowfullscreen></iframe>
+                <p>Resah</p>
+            </li>
+        </ul>
+        <hr>
+        <h2>Windah Basudara</h2>
+        <ul class="video">
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/1LayKPkvI-Y?si=XZ2c05RgadeH1Xql" frameborder="0" allowfullscreen></iframe>
+                <p>INILAH PENAMPAKAN SERVER TERMAHAL JAYAPURA INDAH SETELAH 22 HARI!</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/Ce5qngAg5P4?si=u6OJ0nEwJJ4JNMDw" frameborder="0" allowfullscreen></iframe>
+                <p>KALI INI 5 JUTA SEMOGA DAPAT LUFFY PUTIH GEAR 5! One Piece Bounty Rush</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/A7v8H-rjuQ8?si=DVAyn9z2D9oj8owr" frameborder="0" allowfullscreen></iframe>
+                <p>GAME BOLA TERBAIK YANG KITA TUNGGU AKHIRNYA RILIS! eFootball 2024</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/hA5vQ7WH1Eg?si=aFoHdrwcNYoMOwhD" frameborder="0" allowfullscreen></iframe>
+                <p>ADA YANG ANEH DI KAMAR HOTEL INI! I'm on Observation Duty 6 GAMEPLAY #1</p>
+            </li>
+        </ul>
+        <hr>
+        <h2>HEROISGOD</h2>
+        <ul class="video">
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/qnQBAW7qjR4?si=QHHM_qvWVIvcqmxn" frameborder="0" allowfullscreen></iframe>
+                <p>PERDEBATAN HERO POWER vs HERO META</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/UOJ-sWo7m78?si=gYQX1u5_I4280nqK" frameborder="0" allowfullscreen></iframe>
+                <p>CC PALING "NGESELIN"</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/x0XsSF4fvmw?si=J8kRS6YEUKIL-W6J" frameborder="0" allowfullscreen></iframe>
+                <p>EXPLANER "HALAL"</p>
+            </li>
+            <li class="video-item">
+                <iframe src="https://youtube.com/embed/u8QoyPwpYPM?si=H_804K2KMtOz1dg2" frameborder="0" allowfullscreen></iframe>
+                <p>𝑩𝒖𝒇𝒇 𝑹𝒂𝒔𝒂 𝑵𝒆𝒓𝒇 😭💔</p>
+            </li>
+        </ul> 
+        <br>
+    </div>
+    <footer>
+        <ul class="mirustation">
+            <li><img src="logo.png" alt=""></li>
+            <li><h2>MiruStation</h2></li>
+        </ul>
+        <ul class="contact">
+            <li><h3>Contact Us</h3></li>
+            <li><p>Instagram : <a href="https://www.instagram.com/ivanrhmt_/"> @ivanrhmt_</a></p></li>
+            <li><p>Facebook : <a href="https://www.facebook.com/ivan.rahmatprakasa.7"> Ivan Rahmat Prakasa</a></p></li>
+            <li><p>Email : <a href="https://mail.google.com/mail/u/0/?hl=en#inbox?compose=DmwnWrRnZnHHFgDnBzKmKxwzFtNTTSrmnhwBLTFspDShHzRNFGNpDmSwhzzzdcfltMtWFXgzHXSv"> ivanrahmat.p77@gmail.com</a></p></li>
+        </ul>
+    </footer>
+</body>
+</html>
