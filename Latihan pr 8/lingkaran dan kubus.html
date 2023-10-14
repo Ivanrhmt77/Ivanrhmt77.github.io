@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lingkaran dan Kubus</title>
+    <link rel="stylesheet" href="Latihan pr 8.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title lingkaran">Keliling & Luas Lingkaran</div>
+        <div class="title kubus">Volume Kubus</div>
+      </div>
+      <div class="container">
+        <div class="slide-control">
+          <input type="radio" name="slide" id="lingkaran" checked />
+          <input type="radio" name="slide" id="kubus" />
+          <label for="lingkaran" class="slide lingkaran">Lingkaran</label>
+          <label for="kubus" class="slide kubus">Kubus</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="isi">
+          <form action="#" class="lingkaran">
+            <div class="field">
+              <label for="radius"></label>
+              <input type="number" id="radius" placeholder="Masukkan jari-jari lingkaran" />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Hitung Lingkaran" onclick="hitungLingkaran()" />
+            </div>
+            <div class="hasil">
+              <p>Hasil Keliling Lingkaran: <textarea readonly rows="1" dir="ltr" id="keliling" placeholder="Keliling"></textarea></p>
+              <p>Hasil Luas Lingkaran: <textarea readonly rows="1" dir="ltr" id="luas" placeholder="Luas"></textarea></p>
+            </div>
+          </form>
+          <form action="#" class="kubus">
+            <div class="field">
+              <label for="side"></label>
+              <input type="number" id="side" placeholder="Masukkan panjang sisi kubus" />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Hitung Kubus" onclick="hitungKubus()" />
+            </div>
+            <div class="hasil">
+              <p>Hasil Volume Kubus: <textarea readonly rows="1" dir="ltr" id="volume" placeholder="Volume"></textarea></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="Latihan pr 8.js"></script>
+  </body>
+</html>
