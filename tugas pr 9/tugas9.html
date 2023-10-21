@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        margin: 50px;
+      }
+
+      input {
+        accent-color: #0075ff;
+        cursor: pointer;
+      }
+
+      .box {
+        width: 10px;
+        height: 10px;
+        border: 1px solid black;
+      }
+
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 3px;
+      }
+
+      .city {
+        width: 15px;
+        height: auto;
+      }
+
+      .mu {
+        width: 15px;
+        height: auto;
+      }
+
+      .chelsea {
+        width: 15px;
+        height: auto;
+      }
+
+      .liverpool {
+        width: 15px;
+        height: auto;
+      }
+
+      .spurs {
+        width: 15px;
+        height: auto;
+      }
+
+      .arsenal {
+        width: 15px;
+        height: auto;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      canvas[class="city"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #9ee8ff;
+      }
+
+      canvas[class="mu"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #ff3c1f;
+      }
+
+      canvas[class="chelsea"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #002fff;
+      }
+
+      canvas[class="liverpool"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #d00000;
+      }
+
+      canvas[class="spurs"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #3f3f3f;
+      }
+
+      canvas[class="arsenal"] {
+        border: 1px solid black;
+        width: 13px;
+        height: 13px;
+        margin-right: 3px;
+        background-color: #ff4848;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td>
+          <div id="points" style="width: 600px; height: 400px"></div>
+        </td>
+        <td style="line-height: 25px; top: 0; padding-bottom: 150px">
+          <p style="margin: 0 0 10px 17px; font-weight: 600">Select Club to Include</p>
+          <ul id="ToggleController" style="padding-left: 15px; margin-top: 10px">
+            <li>
+              <input type="checkbox" id="chartToggle1" checked="checked" />
+              <label for="chartToggle1"><canvas class="city"></canvas><img class="city" src="https://logodetimes.com/times/manchester-city/logo-manchester-city-4096.png" alt="" />Manchester City</label>
+            </li>
+            <li>
+              <input type="checkbox" id="chartToggle2" checked="checked" />
+              <label for="chartToggle2"><canvas class="mu"></canvas><img class="mu" src="https://1000marcas.net/wp-content/uploads/2020/02/Logo-Manchester-United.png" alt="" />Manchester United</label>
+            </li>
+            <li>
+              <input type="checkbox" id="chartToggle3" checked="checked" />
+              <label for="chartToggle3"><canvas class="chelsea"></canvas><img class="chelsea" src="https://logos-download.com/wp-content/uploads/2016/05/Chelsea_FC_Logo_2006.png" alt="" />Chelsea</label>
+            </li>
+            <li>
+              <input type="checkbox" id="chartToggle4" checked="checked" />
+              <label for="chartToggle4"><canvas class="liverpool"></canvas><img class="liverpool" src="https://logodetimes.com/times/liverpool/logo-liverpool-512.png" alt="" />Liverpool</label>
+            </li>
+            <li>
+              <input type="checkbox" id="chartToggle5" checked="checked" />
+              <label for="chartToggle5"><canvas class="spurs"></canvas><img class="spurs" src="https://logodetimes.com/times/tottenham/logo-tottenham-1536.png" alt="" />Tottenhan Hotspurs</label>
+            </li>
+            <li>
+              <input type="checkbox" id="chartToggle6" checked="checked" />
+              <label for="chartToggle6"
+                ><canvas class="arsenal"></canvas
+                ><img
+                  class="arsenal"
+                  src="https://th.bing.com/th/id/R.57700040877dd34094233886252b7f02?rik=pHLPRbj%2b8KfZ9w&riu=http%3a%2f%2fassets.stickpng.com%2fthumbs%2f580b57fcd9996e24bc43c4df.png&ehk=IY7WORspTr2l0jKZL8vtONS0DSzMEK2FxGcl7Nx%2blfM%3d&risl=&pid=ImgRaw&r=0"
+                  alt=""
+                />Arsenal</label
+              >
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/flotr2@0.1.0/flotr2.min.js"></script>
+    <script>
+      const season = ["2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23"];
+      var chartData = {
+        1: {
+          data: [
+            [0, 100],
+            [1, 98],
+            [2, 81],
+            [3, 86],
+            [4, 93],
+            [5, 89],
+          ],
+          color: "#9EE8FF",
+        },
+        2: {
+          data: [
+            [0, 81],
+            [1, 66],
+            [2, 66],
+            [3, 74],
+            [4, 58],
+            [5, 75],
+          ],
+          color: "#FF3C1F",
+        },
+        3: {
+          data: [
+            [0, 70],
+            [1, 72],
+            [2, 66],
+            [3, 67],
+            [4, 74],
+            [5, 44],
+          ],
+          color: "#002FFF",
+        },
+        4: {
+          data: [
+            [0, 75],
+            [1, 97],
+            [2, 99],
+            [3, 69],
+            [4, 92],
+            [5, 67],
+          ],
+          color: "#D00000",
+        },
+        5: {
+          data: [
+            [0, 77],
+            [1, 71],
+            [2, 59],
+            [3, 62],
+            [4, 71],
+            [5, 60],
+          ],
+          color: "#3F3F3F",
+        },
+        6: {
+          data: [
+            [0, 63],
+            [1, 70],
+            [2, 56],
+            [3, 61],
+            [4, 69],
+            [5, 84],
+          ],
+          color: "#FF4848",
+        },
+      };
+      var chartOptions = {
+        title: "Points Club Big Six 6 Tahun Terakhir di EPL",
+        grid: {
+          horizontalLines: true,
+          verticalLines: true,
+          outlineWidth: 1,
+        },
+        yaxis: {
+          min: 0,
+          max: 110,
+          tickFormatter: function (val) {
+            return val;
+          },
+        },
+        xaxis: {
+          showLabels: true,
+          min: 0,
+          max: 5,
+          ticks: season.map((subject, index) => [index, subject]),
+        },
+      };
+
+      var chart;
+
+      $(document).ready(function () {
+        chart = Flotr.draw(document.getElementById("points"), getActiveChartData(), chartOptions);
+
+        for (var i = 1; i <= 6; i++) {
+          $("#chartToggle" + i).change(function () {
+            updateChart();
+          });
+        }
+
+        function updateChart() {
+          var newChartData = getActiveChartData();
+          Flotr.draw(document.getElementById("points"), newChartData, chartOptions);
+        }
+
+        function getActiveChartData() {
+          var activeChartData = [];
+          for (var i = 1; i <= 6; i++) {
+            if ($("#chartToggle" + i).is(":checked")) {
+              activeChartData.push(chartData[i]);
+            }
+          }
+          return activeChartData;
+        }
+      });
+    </script>
+  </body>
+</html>
